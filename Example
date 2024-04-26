@@ -1,0 +1,12 @@
+try {
+  const myPair = new Pair(3, 4);
+  console.log(myPair.toString());
+  console.log("Product:", myPair.getProduct());
+
+  const myEllipse = new Ellipse(5, 3);
+  console.log(myEllipse.toString());
+  console.log("Area:", myEllipse.getArea());
+  console.log("Perimeter:", myEllipse.getPerimeter());
+} catch (error) {
+  console.error(error.message);
+}

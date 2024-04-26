@@ -1,0 +1,31 @@
+class Pair {
+  constructor(x, y) {
+    if (typeof x !== "number" || typeof y !== "number") {
+      throw new Error("Invalid input: Arguments must be numbers.");
+    }
+    this.x = x;
+    this.y = y;
+  }
+
+  setX(x) {
+    if (typeof x !== "number") {
+      throw new Error("Invalid input: x must be a number.");
+    }
+    this.x = x;
+  }
+
+  setY(y) {
+    if (typeof y !== "number") {
+      throw new Error("Invalid input: y must be a number.");
+    }
+    this.y = y;
+  }
+
+  getProduct() {
+    return this.x * this.y;
+  }
+
+  toString() {
+    return `Pair(${this.x}, ${this.y})`;
+  }
+}

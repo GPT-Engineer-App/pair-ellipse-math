@@ -1,0 +1,19 @@
+class Ellipse extends Pair {
+  constructor(a, b) {
+    super(a, b);
+  }
+
+  getArea() {
+    return Math.PI * this.x * this.y;
+  }
+
+  getPerimeter() {
+    // Approximation using Ramanujan's formula
+    const h = Math.pow(this.x - this.y, 2) / Math.pow(this.x + this.y, 2);
+    return Math.PI * (this.x + this.y) * (1 + (3 * h) / (10 + Math.sqrt(4 - 3 * h)));
+  }
+
+  toString() {
+    return `Ellipse with semi-major axis ${this.x} and semi-minor axis ${this.y}`;
+  }
+}
